@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include "holberton.h"
+
 /*
  * main -Entry point
  *
@@ -14,9 +15,9 @@ int main(void)
 
 	for (count = 0; count <= length; count++)
 	{
-	putchar(hol_school[count]);
+	_putchar(hol_school[count]);
 	}
-	putchar(10);
+	_putchar(10);
 
 	return (0);
 }
