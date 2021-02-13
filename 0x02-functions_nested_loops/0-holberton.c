@@ -1,11 +1,15 @@
 #include "holberton.h"
 
-/*
+/* _putchar -prints to screen
  * main -Entry point
  *
  * return -success
  */
 
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
 int main(void)
 {
 	char hol_school[] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n'};
