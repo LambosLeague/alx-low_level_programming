@@ -1,14 +1,8 @@
 #include "holberton.h"
 
 /**
- * print_alphabet -display small letters to screen
- *
- * main -entry point
- *
- * Return: Always 0 (success)
+ * print_alphabet_x10 - Display small letters to screen
  */
-
-void print_alphabet_x10(void);
 
 void print_alphabet_x10(void)
 {
@@ -20,6 +14,12 @@ void print_alphabet_x10(void)
 	}
 	_putchar(10);
 }
+
+/**
+ * main -entry point
+ *
+ * Return: Always 0 (success)
+ */
 
 int main(void)
 {
