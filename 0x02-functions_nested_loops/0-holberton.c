@@ -1,11 +1,11 @@
 #include "holberton.h"
 
-/*
- * _putchar -print to user screen
+/**
+ * main - This entry point
  *
- * main -Entry point
+ * Return: On success,  always 0
  *
- * return -success
+ * Description: This is used to print
  */
 
 int main(void)
