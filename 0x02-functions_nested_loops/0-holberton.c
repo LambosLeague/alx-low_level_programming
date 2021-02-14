@@ -18,7 +18,7 @@ int main(void)
 	for (count = 0; count <= length; count++)
 	{
 	_putchar(hol_school[count]);
-	
+
 	if (hol_school[count] == 'n')
 	{
 	break;
