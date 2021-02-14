@@ -1,12 +1,19 @@
 #include "holberton.h"
 
-/*
+/**
+ * _isalpha - checks for uppercase and lowercase
+ * @c: accepts integer both signed and non signed and relates it to ascii
+ * Return: if 1 then error and quits program
+ */
+
+int _isalpha(int c);
+
+/**
  * main - check lowercase
  *
  * Return: if 1 then error and quits program
  */
 
-int _isalpha(int c);
 int main(void)
 {
 	int r;
@@ -22,6 +29,12 @@ int main(void)
 	_putchar('\n');
 	return (0);
 }
+
+/**
+ * _isalpha - checks for uppercase and lowercase
+ * @c: accepts integer both signed and non signed and relates it to ascii
+ * Return: if 1 then error and quits program
+ */
 
 int _isalpha(int c)
 {
