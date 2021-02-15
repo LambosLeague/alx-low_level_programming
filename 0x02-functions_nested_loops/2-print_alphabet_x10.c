@@ -9,14 +9,12 @@ void print_alphabet_x10(void)
 	int l_alpha;
 	int count = 0;
 
-	do
-	{
+	do {
 	for (l_alpha = 97; l_alpha <= 122; l_alpha++)
 	{
 	_putchar(l_alpha);
 	}
 	_putchar(10);
 	count++;
-	}
-	while (count <= 10);
+	} while (count < 10);
 }
