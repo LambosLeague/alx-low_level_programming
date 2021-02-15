@@ -13,12 +13,17 @@
  */
 
 int _putchar(char c);
-
 /**
- * print_alphabet - prototype declaration
+ * print_alphabet - Display small letters to screen
  */
 
 void print_alphabet(void);
+
+/**
+ * print_alphabet_x10 - prototype declaration
+ */
+
+void print_alphabet_x10(void);
 
 /**
  * _islower - checks for lowercase
