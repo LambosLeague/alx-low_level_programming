@@ -41,4 +41,20 @@ int _islower(int c);
 
 int _isalpha(int c);
 
+/**
+ * print_sign - this tell is a number is postive or negative
+ * @n: this is used to enter number from users
+ * Return: this return the success of the compiled code.
+ */
+
+int print_sign(int n);
+
+/**
+ * _abs - checks for absoloute value
+ * @i:  accepts parameter for absolute value from user
+ * Return - value of absolute value is print to screen
+ */
+
+int _abs(int i);
+
 #endif /* holberton_h */
