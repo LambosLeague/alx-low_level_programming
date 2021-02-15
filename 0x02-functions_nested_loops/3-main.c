@@ -1,3 +1,5 @@
+#include "holberton.h"
+
 /**
  * main - check lowercase
  *
