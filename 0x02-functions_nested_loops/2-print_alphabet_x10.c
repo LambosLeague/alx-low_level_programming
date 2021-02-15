@@ -10,22 +10,10 @@ void print_alphabet_x10(void)
 
 	for (l_alpha = 97; l_alpha <= 122; l_alpha++)
 	{
+	for (int count = 0; count <= 10; count++)
+	{
 	_putchar(l_alpha);
 	}
-	_putchar(10);
-}
-
-/**
- * main -entry point
- *
- * Return: Always 0 (success)
- */
-
-int main(void)
-{
-	for (int i = 0; i < 11; i++)
-	{
-	print_alphabet_x10();
 	}
-	return (0);
+	_putchar(10);
 }
