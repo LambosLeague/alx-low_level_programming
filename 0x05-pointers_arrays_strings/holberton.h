@@ -34,4 +34,17 @@ void swap_int(int *a, int *b);
 
 int _strlen(char *s);
 
+/**
+ * _puts - print to screen
+ * @str: buffering user input to screen
+ */
+
+void _puts(char *str);
+
+/**
+ * print_rev - prints reverse of a string
+ * @s: collects user input
+ */
+
+void print_rev(char *s)
 #endif /*end macro holberton_h*/
