@@ -46,5 +46,5 @@ void _puts(char *str);
  * @s: collects user input
  */
 
-void print_rev(char *s)
+void print_rev(char *s);
 #endif /*end macro holberton_h*/
