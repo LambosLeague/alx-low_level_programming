@@ -2,7 +2,7 @@
 
 /**
  * _puts - prints just like printf
- * @str - collect the system or user input
+ * @str: collect the system or user input
  */
 
 void _puts(char *str)
@@ -13,7 +13,7 @@ void _puts(char *str)
 
 /**
  * _strlen - counts length of a sting or char pointer
- * @s: accept user input
+ * @str: accept user input
  * Return: always return legnth counted
  */
 

@@ -1,11 +1,11 @@
 #include "holberton.h"
 
 /**
- * print_rev - prints just like printf
+ * rev_string - prints just like printf
  * @s: collect the system or user input
  */
 
-void print_rev(char *s)
+void rev_string(char *s)
 {
 	int count;
 	int length = _strlen(s);
@@ -34,7 +34,7 @@ void print_rev(char *s)
 
 /**
  * _strlen - counts length of a sting or char pointer
- * @str: accept user input
+ * @s: accept user input
  * Return: always return legnth counted
  */
 
@@ -48,4 +48,16 @@ int _strlen(char *str)
 	str++;
 	}
 	return (count);
+}
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
 }
