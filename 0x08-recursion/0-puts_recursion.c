@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+ * _puts_recursion - prints to screen
+ * @s: buffer characters
+ */
+
 void _puts_recursion(char *s)
 {
 	_putchar(*s);
