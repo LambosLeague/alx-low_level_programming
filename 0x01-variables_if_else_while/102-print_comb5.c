@@ -8,12 +8,7 @@
 
 int main(void)
 {
-	int ii = 48;
-	int jj = 48;
-	int kk = 48;
-	int ll = 49;
-	int cm = 44;
-	int spc = 32;
+	int ii = 48, jj = 48, kk = 48, ll = 49, cm = 44, spc = 32;
 	int m_count = 0;
 
 	while (m_count < 9899)
@@ -31,25 +26,26 @@ int main(void)
 		if (ll == 58)
 		{
 			kk++;
-			ll = 48;
+			ll = jj;
 		}
 		if (kk == 58)
 		{
 			jj++;
-			ll = 48;
-			kk = 48;
+			ll = ii + 2;
+			kk = ii;
 		}
 		if (jj == 58)
-                {
-                        ii++;
-                        ll = 48;
-                        kk = 48;
+		{
+			ii++;
+			ll = 48;
+			kk = 48;
 			jj = 48;
-                }
+		}
 		if ((ii == 57) && (jj == 56) && (kk == 57) && (ll == 57))
 		{
-			cm = 10;		
+			cm = 0;
+			spc = 10;
 		}
-	}	
+	}
 	return (0);
 }

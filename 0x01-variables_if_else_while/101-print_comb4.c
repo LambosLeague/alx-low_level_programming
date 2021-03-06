@@ -1,9 +1,11 @@
 #include <stdio.h>
+
 /**
  * main -entry point
  *
  * Return: Always 0 (success)
  */
+
 int main(void)
 {
 	int ii = 48;
@@ -12,7 +14,6 @@ int main(void)
 	int cm = 44;
 	int spc = 32;
 
-	
 	while ((ii <= 55) && (jj <= 56) && (kk <= 57))
 	{
 		putchar(ii);
@@ -35,8 +36,8 @@ int main(void)
 		}
 		if ((ii == 55) && (jj == 56) && (kk == 57))
 		{
-			cm = 10;
-			spc = 0;
+			cm = 0;
+			spc = 10;
 		}
 	}
 	return (0);
