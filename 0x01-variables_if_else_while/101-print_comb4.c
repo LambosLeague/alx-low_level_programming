@@ -36,8 +36,8 @@ int main(void)
 		}
 		if ((ii == 55) && (jj == 56) && (kk == 57))
 		{
-			cm = 0;
-			spc = 10;
+			cm = 10;
+			spc = 0;
 		}
 	}
 	return (0);

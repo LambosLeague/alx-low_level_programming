@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h>:
 
 /**
  * main -entry point
@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	int ii = 48, jj = 48, kk = 48, ll = 49, cm = 44, spc = 32,  spc1 = 32, m_c = 0;
+	int ii = 48, jj = 48, kk = 48, ll = 49, cm = 44, spc = 32, m_c = 0;
 
 	while (ii < 58)
 	{
