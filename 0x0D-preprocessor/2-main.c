@@ -1,35 +1,12 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ * main - point to exceute all program
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
-/**
- * main - main program
- *
- * Return: 0 on success
+ * Return: on succeess (0)
  */
 
 int main(void)
 {
-	char *file = __FILE__;
-
-	while (*file != '\0')
-	{
-		_putchar(*file);
-		file++;
-	}
-
-	_putchar(10);
+	printf("%s\n", __FILE__);
 }
