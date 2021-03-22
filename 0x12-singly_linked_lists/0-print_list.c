@@ -9,24 +9,24 @@
 
 size_t print_list(const list_t *h)
 {
-	unsigned int cnt = 2;
+	unsigned int cnt = 1;
 	
 	list_t *ptr;
-	ptr = (*h).next;
 
-	while((*ptr).next)
+	while(h)
 	{
-		cnt++;
-	}
-
-	if((*h).str == NULL && (*ptr).str == NULL)
+		if((*h).str == NULL)
 			printf("[0] (nil)\n");
-	else
-	{
-		printf("[%d] %s\n", h->len, h->str);
-		printf("[%d] %s\n", ptr->len, ptr->str);
+		else
+			printf("[%d] %s\n", h->len, h->str);
+		if((*h).next)
+		{
+			ptr = (*h).next;
+			printf("[%d] %s\n", ptr->len, ptr->str);
+			cnt++;
+		}
+		if(!(*ptr).next)
+			break;
 	}
-
-
 	return (cnt);
 }

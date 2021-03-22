@@ -1,5 +1,6 @@
 #ifndef LIST_T
 #define LIST_T
+#include <stddef.h>
 
 struct list
 {
@@ -11,5 +12,6 @@ struct list
 typedef struct list list_t;
 
 size_t print_list(const list_t *h);
+int _strlen(char *s);
 
 #endif /* LIST_T */
