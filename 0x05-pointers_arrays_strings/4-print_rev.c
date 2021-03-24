@@ -7,27 +7,11 @@
 
 void print_rev(char *s)
 {
-	int count;
 	int length = _strlen(s);
-	char *last_str = s;
-	char ch_str[length];
 
-	for (count = 0; count < length - 1; count++)
+	for (; length >= 0; length--)
 	{
-	last_str++;
-	}
-	for (count = 0; count < length; count++)
-	{
-	ch_str[count] = *last_str;
-	last_str--;
-	if (count == length)
-	{
-	break;
-	}
-	}
-	for (count = 0; count < length; count++)
-	{
-	_putchar(ch_str[count]);
+		_putchar(*(s + length));
 	}
 	_putchar(10);
 }

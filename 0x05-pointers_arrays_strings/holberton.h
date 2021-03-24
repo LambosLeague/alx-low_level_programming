@@ -48,4 +48,17 @@ void _puts(char *str);
 
 void print_rev(char *s);
 
+/**
+ * rev_string - reverse of a string
+ * @s: collects user input
+ */
+
+void rev_string(char *s);
+/**
+ * puts_half - prints half of strings length
+ * @str: collect user or system input
+ */
+
+void puts_half(char *str);
+
 #endif /*end macro holberton_h*/

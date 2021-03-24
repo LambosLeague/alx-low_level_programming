@@ -7,31 +7,29 @@
 
 void rev_string(char *s)
 {
-	int count;
 	int length = _strlen(s);
-	char *last_str = s;
-	char ch_str[length];
+	int cnt = 0;
+	char wrd[length + 1];
 
-	for (count = 0; count < length - 1; count++)
+	for (; length >= 0; length--, cnt++)
 	{
-	last_str++;
+		if (*(s + length) == '\0')
+			length -= 1;
+
+		wrd[cnt] = *(s + length);
+
+		if (length <= 0)
+			wrd[cnt + 1] = '\0';
 	}
-	for (count = 0; count < length; count++)
+	length += 1;
+	cnt++;
+	while(length < cnt)
 	{
-	ch_str[count] = *last_str;
-	last_str--;
-	if (count == length)
-	{
-	break;
+		*(s + length) = wrd[length];
+		length++;
 	}
-	}
-	for (count = 0; count < length; count++)
-	{
-	_putchar(ch_str[count]);
-	}
-	_putchar(10);
+
 }
-
 /**
  * _strlen - counts length of a sting or char pointer
  * @s: accept user input
@@ -48,16 +46,4 @@ int _strlen(char *str)
 	str++;
 	}
 	return (count);
-}
-
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
 }
