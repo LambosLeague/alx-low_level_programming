@@ -16,7 +16,7 @@ void rev_string(char *s)
 		if (*(s + length) == '\0')
 			length -= 1;
 
-		wrd[cnt] = *(s + length);
+		*(wrd + cnt) = *(s + length);
 
 		if (length <= 0)
 			wrd[cnt + 1] = '\0';
