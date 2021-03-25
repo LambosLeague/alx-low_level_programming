@@ -1,31 +1,36 @@
 #include "holberton.h"
+#include <stdlib.h>
 
 /**
  * _strcpy - copy from source and paste to destination
- * @dest: empty buffer to paste to
- * @src: source to copy from
+ * @dest: target destination for copy
+ * @src: copy from
  */
 
 char *_strcpy(char *dest, char *src)
 {
-	int len = 0, len1 = 0, bf, cnt = 0;
+	int len = 0, len1 = 0, cnt1 = 0, cnt = 0;
+	char *ss;
 
 	while (src[len] != '\0')
 		len++;
 	while (dest[len1] != '\0')
 		len1++;
-	bf = len1;
-	while (dest[len1] == '\0')
-	{
-		dest[len1 + 2] = '\0';
-		dest[bf] = src[cnt];
-		bf++;
-		cnt++;
-		len1++;
+	
+	ss = malloc(sizeof(char) * (len + len1));
 
-		if (cnt == len)
+	while (dest)
+	{
+		ss[cnt] = dest[cnt];
+		if (cnt >= len1)
+		{
+			ss[cnt] = src[cnt1];
+			cnt1++;
+		}
+		cnt++;
+		if (cnt1 == len)
 			break;
 	}
-
+	dest = ss;
 	return (dest);
 }
