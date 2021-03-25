@@ -7,43 +7,29 @@
 
 void rev_string(char *s)
 {
-	int length = _strlen(s);
-	int cnt = 0;
-	char *wrd = s;
 
-	for (; length >= 0; length--, cnt++)
+	int length = 0, ct;
+	int cnt = 0;
+	char wrd, tmp;
+
+	while (s[length] != '\0')
+		length++;
+
+	ct = length / 2;
+	if (length % 2 == 0)
+		ct -= 1;
+
+	for (; ct >= 0; ct--, length--, cnt++)
 	{
 		if (*(s + length) == '\0')
 			length -= 1;
 
-		wrd[cnt] = *(s + length);
+		tmp = s[cnt];
+		wrd = *(s + length);
+		s[cnt] = wrd;
+		s[length] = tmp;
 
 		if (length <= 0)
-			wrd[cnt + 1] = '\0';
+			s[cnt + 1] = '\0';
 	}
-	length += 1;
-	cnt++;
-	while(length < cnt)
-	{
-		*(s + length) = wrd[length];
-		length++;
-	}
-
-}
-/**
- * _strlen - counts length of a sting or char pointer
- * @s: accept user input
- * Return: always return legnth counted
- */
-
-int _strlen(char *str)
-{
-	int count = 0;
-
-	while (*str != '\0')
-	{
-	count++;
-	str++;
-	}
-	return (count);
 }

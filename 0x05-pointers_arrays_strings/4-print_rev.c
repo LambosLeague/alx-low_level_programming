@@ -14,7 +14,7 @@ void print_rev(char *s)
 		if (*(s + length) == '\0')
 			length -= 1;
 		if (*(s + length) == '\0' && *(s + (length + 1)) == '\0')
-			length--;
+			break;
 		_putchar(*(s + length));
 	}
 	_putchar(10);
