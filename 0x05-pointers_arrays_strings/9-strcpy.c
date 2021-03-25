@@ -31,6 +31,11 @@ char *_strcpy(char *dest, char *src)
 		if (cnt1 == len)
 			break;
 	}
-	dest = ss;
+	cnt = 0;
+	while (ss[cnt] != '\0')
+	{
+		dest[cnt] = ss[cnt];
+		cnt++;
+	}
 	return (dest);
 }

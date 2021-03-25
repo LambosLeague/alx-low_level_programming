@@ -8,10 +8,12 @@
  */
 int main(void)
 {
-	char *s1 = "Abdul Hamed finally you did it man\n";
-	char *p = "Its pays to step on the dial\n";
-	char *rr = _strcpy(p, s1);
-	printf("%s", rr);
-	
+	char s1[98];
+	char *p;
+
+	p = _strcpy(s1, "First, solve the problem. Then, write the code\n");
+	printf("%s", s1);
+	printf("%s", p);
+
 	return (0);
 }
