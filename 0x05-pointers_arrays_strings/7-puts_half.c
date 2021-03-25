@@ -7,40 +7,20 @@
 
 void puts_half(char *str)
 {
-	int length = _strlen(str);
-	int count = 0; 
-	char *s = str;
-	char ss[count];
-	int half = length / 2;
+	int length = 0, half;
 
-	for (count = 0; count <= length && half == count; half++, count++)
+	while (s[length] != '\0')
+		length++;
+
+	half = length / 2;
+
+	for (; half < length; half++)
 	{
-	ss[count] = *s;
-	_putchar(ss[count]);
-	s++;
-	}
-	if (length % 2 != 0)
-	{
-	int n = (length - 1) / 2;
-	_putchar(ss[n]);
+		if (str[half] == '\0')
+			break;
+		if (length % 2 == 1)
+			length--;
+		_putchar(str[half]);
 	}
 	_putchar(10);
-}
-
-/**
- * _strlen - counts length of a sting or char pointer
- * @s: accept user input
- * Return: always return legnth counted
- */
-
-int _strlen(char *str)
-{
-	int count = 0;
-
-	while (*str != '\0')
-	{
-	count++;
-	str++;
-	}
-	return (count);
 }
