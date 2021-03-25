@@ -7,37 +7,16 @@
 
 void puts2(char *str)
 {
-	int length = _strlen(str);
-	int count = 0; 
-	char *s = str;
-	char ss[count];
+	int length = 0, count = 0; 
 
-	for (count = 0; count <= length; count++)
+	while (str[length] != '\0')
+		length++;
+	for (; count <= length; count++)
 	{
-	ss[count] = *s;
 	if (count % 2 == 0)
 	{
-	_putchar(ss[count]);
+	_putchar(str[count]);
 	}
-	s++;
 	}
 	_putchar(10);
-}
-
-/**
- * _strlen - counts length of a sting or char pointer
- * @s: accept user input
- * Return: always return legnth counted
- */
-
-int _strlen(char *str)
-{
-	int count = 0;
-
-	while (*str != '\0')
-	{
-	count++;
-	str++;
-	}
-	return (count);
 }
