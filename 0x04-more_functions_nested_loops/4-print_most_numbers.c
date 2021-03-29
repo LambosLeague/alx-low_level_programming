@@ -1,5 +1,9 @@
 #include "holberton.h"
 
+/**
+ * print_most_numbers - skips 2 and 4
+ */
+
 void print_most_numbers(void)
 {
 	int i = 48;
