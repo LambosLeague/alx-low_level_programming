@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+/**
+ * create_file - creates and writes and check a file on disk
+ * @filename: name of file to be created
+ * @text_content: buffers to and saves to file name
+ * Return: number of words written.
+ */
+
 int create_file(const char *filename, char *text_content)
 {
 	int fd, cnt = 0;
