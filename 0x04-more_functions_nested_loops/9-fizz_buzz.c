@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/**
+ * main - checks numbers of multiple of 3 and 5
+ *
+ * Return: on success 0
+ */
+
 int chk_x(int x);
 
 int main(void)
@@ -13,7 +19,14 @@ int main(void)
 			printf("%d ", x);
 		x++;
 	}
+	return (0);
 }
+
+/**
+ * chk_x - checks numbers
+ * @x: numbers to check for if divisible by 3 1n3 5
+ * Return: 1 on true and 0 on false
+ */
 
 int chk_x(int x)
 {
