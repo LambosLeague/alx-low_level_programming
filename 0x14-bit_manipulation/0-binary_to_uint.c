@@ -11,6 +11,9 @@ unsigned int binary_to_uint(const char *b)
 {
 	int rslt = 0, cnt = 0;
 
+	if (!b | *b = 0)
+		return (0);
+
 	while (b[cnt] != 0)
 		cnt++;
 	cnt--;
