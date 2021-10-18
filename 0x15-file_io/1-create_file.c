@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * create_file - creates and writes and check a file on disk
@@ -10,7 +10,6 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd, cnt = 0;
-	ssize_t cnt1;
 
 	if (filename == 0)
 		return (-1);
@@ -22,23 +21,20 @@ int create_file(const char *filename, char *text_content)
 
 		if (fd == -1)
 		{
-			return (-1);
 			write(STDOUT_FILENO, "file can not be created\n", 24);
+			return (-1);
 		}
 		if (!text_content)
 		{
-			return (-1);
 			write(STDOUT_FILENO, "file can not be written, write “fails”\n", 39);
+			return (-1);
 		}
 		else
-		{
-			while(text_content[cnt] != 0)
-			{
-				cnt1 = write(fd, &*(text_content + cnt), 1);
-				cnt++;
-			}
-		}
+			while (text_content[cnt++] != 0)
+				;
+		cnt = write(fd, text_content, (cnt - 1));
 	}
+
 	close(fd);
 	return (1);
 }
