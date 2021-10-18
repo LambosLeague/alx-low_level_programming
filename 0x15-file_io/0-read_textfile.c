@@ -10,7 +10,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd, cnt = 0;
-	ssize_t count = 0, sz;
+	ssize_t sz;
 	char *phrase = malloc(sizeof(char) * letters);
 
 	if (filename == 0)
@@ -25,15 +25,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	while (phrase[cnt] != 0)
-	{
 		_putchar(*(phrase + cnt++));
-		count++;
-	}
-	if (count < 0)
-		return (0);
 
 	close(fd);
 	free(phrase);
 
-	return (count);
+	return ((ssize_t)cnt);
 }
