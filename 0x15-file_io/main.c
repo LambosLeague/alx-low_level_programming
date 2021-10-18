@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "holberton.h"
+#include "main.h"
 
 /**
  * main - check the code for Holberton School students.
@@ -18,7 +18,7 @@ int main(int ac, char **av)
 	}
 	n = read_textfile(av[1], 114);
 	printf("\n(printed chars: %li)\n", n);
-	n = read_textfile(av[1], 1024);
+	n = read_textfile(av[1], 124);
 	printf("\n(printed chars: %li)\n", n);
 	return (0);
 }

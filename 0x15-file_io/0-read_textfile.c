@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * read_textfile - read files from a disk storage location
@@ -21,16 +21,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	sz = read(fd, phrase, letters);
-	if (sz < 0)
-		return (0);
-
-	if (!phrase)
+	if (sz < 0 || !phrase)
 		return (0);
 
 	while (phrase[cnt] != 0)
 	{
-		_putchar(*(phrase + cnt));
-		cnt++;
+		_putchar(*(phrase + cnt++));
 		count++;
 	}
 	if (count < 0)
