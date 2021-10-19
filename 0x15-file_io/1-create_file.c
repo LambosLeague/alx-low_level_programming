@@ -20,19 +20,23 @@ int create_file(const char *filename, char *text_content)
 		fd = creat(filename, 0600);
 
 		if (fd == -1)
-		{
-			write(STDOUT_FILENO, "fails\n", 6);
 			return (-1);
-		}
+
 		if (!text_content)
 			return (1);
-		else
-		{
-			while (text_content[cnt++] != 0)
-				;
-			cnt = write(fd, text_content, (cnt - 1));
-		}
+
+		while (text_content[cnt++] != 0)
+			;
+		cnt = write(fd, text_content, (cnt - 1));
 	}
+	else
+	{
+		/* since O_TRUNC is not used, this will work inplace of it*/
+		while (text_content[cnt++] != 0)
+			;
+		cnt = write(fd, text_content, (cnt - 1));
+	}
+
 
 	close(fd);
 	return (1);
