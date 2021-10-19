@@ -14,7 +14,7 @@ int create_file(const char *filename, char *text_content)
 	if (filename == 0)
 		return (-1);
 
-	fd = open(filename, O_RDWR | O_TRUNC);
+	fd = open(filename, O_RDWR);
 	if (fd < 0)
 	{
 		fd = creat(filename, 0600);
@@ -25,14 +25,13 @@ int create_file(const char *filename, char *text_content)
 			return (-1);
 		}
 		if (!text_content)
-		{
-			write(STDOUT_FILENO, "fails\n", 6);
-			return (-1);
-		}
+			continue;
 		else
+		{
 			while (text_content[cnt++] != 0)
 				;
-		cnt = write(fd, text_content, (cnt - 1));
+			cnt = write(fd, text_content, (cnt - 1));
+		}
 	}
 
 	close(fd);
