@@ -1,13 +1,15 @@
 #include "main.h"
-int main(void)
-{
-    print_triangle(10);
-    print_triangle(-3);
-    return (0);
-}
+
+/**
+ * print_triangle - prints triangle to screen made of a particular character
+ * @size: size of triangle
+ *
+ */
+
 void print_triangle(int size)
 {
 	int i = 0, x = size;
+	int y = 0, J = 0;
 
 	if (size <= 0)
 	{
@@ -15,7 +17,6 @@ void print_triangle(int size)
 		return;
 	}
 
-	int y = 0, J = 0;
 	for (; x >= i; )
 	{
 		if (x > 1 && x != 1)
