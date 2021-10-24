@@ -1,6 +1,13 @@
 #include "main.h"
 
-int main(int ac, char **av)
+/**
+ * main - factorization of primes giving the
+ * highest prime possible of a given number.
+ *
+ * Return: on success (0);
+ */
+
+int main(void)
 {
 	int64_t no, *primed;
 	long int cnt = 0, st = 0;
@@ -18,10 +25,20 @@ int main(int ac, char **av)
 	return (0);
 }
 
+/**
+ * primes - factorization of numbers divisible
+ * by itsef andd 1.
+ * @no: long long is replaced with int64_t -> a typedef
+ * from <"stdint.h"> library
+ * @cnt: counts with an address from function in use
+ *
+ * Return: a pointer of length of primes in a number
+ */
+
 int64_t *primes(int64_t no, long int *cnt)
 {
 	int64_t *str;
-     	int64_t n = 2;
+	int64_t n = 2;
 
 	*cnt = 0;
 	str = malloc(sizeof(*str) * 1);
@@ -52,6 +69,15 @@ int64_t *primes(int64_t no, long int *cnt)
 	}
 	return (str);
 }
+
+/**
+ * remallocd - copy data from a pointer and extend
+ * it memory to new address
+ * @str: pointer with old data
+ * @cnt: amount of malloced space in heap to be created
+ *
+ * Return: interger values stored.
+ */
 
 int64_t *remallocd(int64_t *str, int64_t cnt)
 {
