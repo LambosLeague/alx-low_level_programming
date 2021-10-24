@@ -10,7 +10,7 @@ void patch_print(int *cnt, int x, int n, int64_t *i_sqrd, int *len);
 
 int _int_len(int i);
 
-int64_t _int_sqr(int x, int y);
+int64_t _int_sqr(int64_t x, int y);
 
 int64_t *primes(int64_t no, long int *cnt);
 

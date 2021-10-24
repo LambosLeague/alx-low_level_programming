@@ -91,7 +91,7 @@ int _int_len(int i)
  * Return: recursively squares
  */
 
-int64_t _int_sqr(int x, int y)
+int64_t _int_sqr(int64_t x, int y)
 {
 	if (x == 0)
 		return (0);
@@ -104,5 +104,5 @@ int64_t _int_sqr(int x, int y)
 
 	x = x * _int_sqr(x, (y = y - 1));
 
-	return ((int64_t)x);
+	return (x);
 }
