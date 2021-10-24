@@ -9,6 +9,10 @@
 char *cap_string(char *s)
 {
 	int i = 0;
+	char snt[] = {32, ',', ';', '.', '!', '?', 34, '(', ')', 123, 125};
+
+	if (!s)
+		return (0);
 
 	if (s[0] >= 97 && s[0] <= 122)
 		s[0] -= 32;
@@ -21,11 +25,11 @@ char *cap_string(char *s)
 			if (s[i] >= 97 && s[i] <= 122)
 				s[i] -= 32;
 		}
-		else if (s[i] != 32 && s[i] != ',' && s[i] != ';' && s[i] != '.' && s[i] == 63 && s[i] != '!' && s[i] != 34 && s[i] != 40 && s[i] != 41 && s[i] != 123 && s[i] != 125)
+		else if (matcher(s[i], snt) == 0)
 			i++;
 		else if (s[i] == ',')
 			i++;
-		else if (s[i] == 32 || s[i] == ';' || s[i] == '.' || s[i] == '!' || s[i] == 34 || s[i] == 40 || s[i] == 41 || s[i] == 63 || s[i] == 123 || s[i] == 125)
+		else if (matcher(s[i], snt) == 1)
 		{
 			i++;
 			if (s[i] >= 97 && s[i] <= 122)
@@ -36,4 +40,27 @@ char *cap_string(char *s)
 	}
 
 	return (s);
+}
+
+/**
+ * matcher - matches against a character
+ * @x: a character
+ * @snt: some characters stored
+ *
+ * Return: (1) a successful match
+ */
+
+int matcher(char x, char *snt)
+{
+	int kp = 0;
+
+	if(!snt)
+		return (-9);
+	while (snt[kp] != 0)
+	{
+		if (x == snt[kp])
+			return (1);
+		kp++;
+	}
+	return (0);
 }
