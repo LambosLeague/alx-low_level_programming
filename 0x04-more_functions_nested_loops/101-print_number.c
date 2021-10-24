@@ -8,7 +8,8 @@
 
 void print_number(int n)
 {
-	int x = 0, len = _int_len(n), i_sqrd = _int_sqr(10, len), cnt;
+	int x = 0, len = _int_len(n), cnt;
+	int64_t i_sqrd = _int_sqr(10, len);
 
 	if ((n < 10) && (n >= 0))
 	{
@@ -52,7 +53,7 @@ void print_number(int n)
  *
  */
 
-void patch_print(int *cnt, int x, int n, int *i_sqrd, int *len)
+void patch_print(int *cnt, int x, int n, int64_t *i_sqrd, int *len)
 {
 	x = (n % *i_sqrd) / (*i_sqrd / 10);
 	_putchar(x + 48);
@@ -90,7 +91,7 @@ int _int_len(int i)
  * Return: recursively squares
  */
 
-int _int_sqr(int x, int y)
+int64_t _int_sqr(int x, int y)
 {
 	if (x == 0)
 		return (0);
@@ -101,5 +102,7 @@ int _int_sqr(int x, int y)
 	if (y == 1)
 		return (x);
 
-	return (x * _int_sqr(x, (y = y - 1)));
+	x = x * _int_sqr(x, (y = y - 1));
+
+	return ((int64_t)x);
 }

@@ -6,11 +6,11 @@
 
 void print_number(int n);
 
-void patch_print(int *cnt, int x, int n, int *i_sqrd, int *len);
+void patch_print(int *cnt, int x, int n, int64_t *i_sqrd, int *len);
 
 int _int_len(int i);
 
-int _int_sqr(int x, int y);
+int64_t _int_sqr(int x, int y);
 
 int64_t *primes(int64_t no, long int *cnt);
 
