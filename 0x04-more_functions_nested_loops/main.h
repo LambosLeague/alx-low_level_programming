@@ -6,7 +6,7 @@
 
 void print_number(int n);
 
-void patch_print(int *cnt, int x, int n, int64_t *i_sqrd, int *len);
+void patch_print(int *cnt, int x, int64_t n, int64_t *i_sqrd, int *len);
 
 int _int_len(int i);
 

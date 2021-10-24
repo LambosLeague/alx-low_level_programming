@@ -9,7 +9,7 @@
 void print_number(int n)
 {
 	int x = 0, len = _int_len(n), cnt;
-	int64_t i_sqrd = _int_sqr(10, len);
+	int64_t i_sqrd = _int_sqr(10, len), xx = (int64_t)n;
 
 	if ((n < 10) && (n >= 0))
 	{
@@ -28,16 +28,16 @@ void print_number(int n)
 		else if (n <= -10)
 		{
 			_putchar(45);
-			n *= (-1);
+			xx *= (-1);
 			cnt = 1;
 			while (len != 0)
-				patch_print(&cnt, x, n, &i_sqrd, &len);
+				patch_print(&cnt, x, xx, &i_sqrd, &len);
 		}
 		else
 		{
 			cnt = 0;
 			while (len != 0)
-				patch_print(&cnt, x, n, &i_sqrd, &len);
+				patch_print(&cnt, x, xx, &i_sqrd, &len);
 		}
 	}
 }
@@ -53,7 +53,7 @@ void print_number(int n)
  *
  */
 
-void patch_print(int *cnt, int x, int n, int64_t *i_sqrd, int *len)
+void patch_print(int *cnt, int x, int64_t n, int64_t *i_sqrd, int *len)
 {
 	x = (n % *i_sqrd) / (*i_sqrd / 10);
 	_putchar(x + 48);
